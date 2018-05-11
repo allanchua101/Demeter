@@ -13,6 +13,5 @@ To solve the issue, big companies came up with an idea to build a web app that i
 - ASP.net Core (Backing API)
 - Apollo / GraphQL 
 - VueJS
-- React JS
 - PostgreSQL
 - SQL Server
