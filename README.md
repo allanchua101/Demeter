@@ -1,5 +1,5 @@
 # Description
-The goal of this repository is to showcase the benefits of utilizing Micro-Frontends architecture in building large scale applications.  
+The goal of this repository is to showcase the benefits of utilizing Microfrontends + Microservices architecture in building large scale applications.  
 
 ## Abstract
 
