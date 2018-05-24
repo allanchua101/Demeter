@@ -16,3 +16,4 @@ To solve the issue, big companies came up with an idea to build a web app that i
 - VueJS
 - PostgreSQL
 - SQL Server
+- Mongo DB
