@@ -11,6 +11,7 @@ To solve the issue, big companies came up with an idea to build a web app that i
 
 - Express (Backing APIs and Gateway Aggregation)
 - ASP.net Core (Backing API)
+- Spring MVC
 - Apollo / GraphQL 
 - VueJS
 - PostgreSQL
