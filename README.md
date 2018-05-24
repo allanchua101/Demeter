@@ -7,6 +7,20 @@ Microservices have recently gained attention and hype from the dev community. Ho
 
 To solve the issue, big companies came up with an idea to build a web app that is composed by modules owned by independent teams (Often aligned with the bounded context division in a Microservice Architecture). This approach gives teams an end-to-end control on building features (persistence layer to front-end layer). This approach is called Micro Frontends.
 
+## Application
+
+Demeter is an online shopping application that sells extremely rare items (Differentiator's store).
+
+![Shopping Page](https://github.com/allanchua101/Microfrontends-POC/blob/master/docs/wireframes/Shopping%20Page.png)
+
+### Bounded Contexts
+
+- Authentication - The context responsible for managing user records and login historizations.
+- Products - The context responsible for managing product information.
+- Catalog - The context responsible for managing product browsing activities. 
+- Cart - The context responsible for managing items that an end-user intends to buy.
+- Transactions - The context responsible for managing money-product exchanges.
+
 ### Tech Stack
 
 - Express (Backing APIs and Gateway Aggregation)
