@@ -9,7 +9,7 @@ CREATE FUNCTION user_register
 RETURNS VOID AS
 $BODY$
 	BEGIN
-		INSERT INTO public.users
+		INSERT INTO users
 		(
 			 userId
 			,firstName
