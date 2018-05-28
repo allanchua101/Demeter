@@ -1,0 +1,13 @@
+{
+    "server": {
+      "port": 3030,
+      "version": "1.0.0.0"
+    },
+    "database": {
+      "host": "xxxxxx",
+      "port": 55555,
+      "db": "XXXXX",
+      "user": "XXXXX",
+      "password": "XXXXX" 
+    }
+  }
