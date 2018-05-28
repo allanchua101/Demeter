@@ -11,11 +11,11 @@ $BODY$
 	BEGIN
 		INSERT INTO users
 		(
-			 userId
-			,firstName
-			,lastName
-			,email
-			,accessKey
+			 "userId"
+			,"firstName"
+			,"lastName"
+			,"email"
+			,"accessKey"
 		)
 		VALUES
 		(

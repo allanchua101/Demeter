@@ -7,7 +7,7 @@ $BODY$
 	BEGIN
 		RETURN EXISTS (SELECT 1 
 					   FROM public.users 
-					   WHERE LOWER("email") = LOWER(p_email));
+					   WHERE LOWER(email) = LOWER(p_email));
    	END
 $BODY$
 LANGUAGE 'plpgsql';
