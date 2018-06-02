@@ -18,35 +18,41 @@ let handleDbError = (err, resolver, rejector, onSuccess, onError) => {
         rejector(executeIfProvided(onError, err));
 }
 
-let executeQuery = (strategy, query, onSuccess, onError) => {
+let executeQuery = (strategy, input) => {
     return buildPromise((resolve, reject) => {
-        strategy(query)
-            .then(result => handleOKResponse(result, resolve, onSuccess))
-            .catch(err => handleDbError(err, resolve, reject, onSuccess, onError));
+        strategy(input.query, input.params, input.masker)
+            .then(result => handleOKResponse(result, resolve, input.onSuccess))
+            .catch(err => handleDbError(err, resolve, reject, input.onSuccess, input.onError));
     });
 };
 
 /**
  * Method used for retrieving single object / value from the data store.
  * 
- * @param {String} query - The SQL query statement that would be used to retrieve target data.
- * @param {Function} onSuccess - An optional callback that would be invoked if any mutations 
- *                               needs to be performed on the query result.
- * @param {Function} onError - An optional callback that would be invoked if any process needs to be
- *                             performed on the response data.
+ * @param {object} params - The parameter object that defines behavior of execution.
+ * @param {String} params.query - The SQL query statement that would be used to retrieve target data.
+ * @param {object} [params.params] - The parameter values that needs to be passed to DB function.
+ * @param {Function} [params.masker] - The function that would be used to mask the result set.
+ * @param {Function} [params.onSuccess] - The callback that would be invoked if any mutations 
+ *                                        needs to be performed on the query result.
+ * @param {Function} [params.onError] - The callback that would be invoked if any process needs to be 
+ *                                      performed on the response data.
  */
-let getSingle = (query, onSuccess, onError) => executeQuery(dbstore.one, query, onSuccess, onError);
+let getSingle = (params) => executeQuery(dbstore.one, params);
 
 /**
- * Method used for retrieving a collection from the data store.
+ * Method used for retrieving a collection / value from the data store.
  * 
- * @param {String} query - The SQL query statement that would be used to retrieve target collection.
- * @param {Function} onSuccess - An optional callback that would be invoked if any mutations 
- *                               needs to be performed on the query result.
- * @param {Function} onError - An optional callback that would be invoked if any process needs to be
- *                             performed on the response data.
+ * @param {object} params - The parameter object that defines behavior of execution.
+ * @param {String} params.query - The SQL query statement that would be used to retrieve target data.
+ * @param {object} [params.params] - The parameter values that needs to be passed to DB function.
+ * @param {Function} [params.masker] - The function that would be used to mask the result set.
+ * @param {Function} [params.onSuccess] - The callback that would be invoked if any mutations 
+ *                                        needs to be performed on the query result.
+ * @param {Function} [params.onError] - The callback that would be invoked if any process needs to be 
+ *                                      performed on the response data.
  */
-let getList = (query, onSuccess, onError) => executeQuery(dbstore.many, query, onSuccess, onError);
+let getList = (params) => executeQuery(dbstore.many, params);
 
 module.exports = {
     getSingle,
