@@ -5,6 +5,7 @@ CREATE TABLE public.users
     "lastName" character varying(64) COLLATE pg_catalog."default" NOT NULL,
     "email" character varying(128) COLLATE pg_catalog."default" NOT NULL,
     "accessKey" character varying(1024) COLLATE pg_catalog."default" NOT NULL,
+    "isActive" bit COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT users_pkey PRIMARY KEY ("userId")
 )
 WITH (
