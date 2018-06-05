@@ -4,9 +4,10 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon app.js"
   },
   "dependencies": {
+    "nodemon": "^1.17.5",
     "config": "^1.30.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
