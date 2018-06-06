@@ -9,6 +9,7 @@ const command = require('../../../utilities/data-stores/dbstore-command');
  * @param {string} [params.lastName] - The last name of the user.
  * @param {string} [params.email] - The email of the user.
  * @param {string} [params.accessKey] - The access key of the user.
+ * @param {boolean} [params.isActive] - Flag that indicates if user is active.
  * 
  */
 let execute = function(params) {
@@ -19,7 +20,7 @@ let execute = function(params) {
         p_lastName: params.lastName,
         p_email: params.email,
         p_accessKey: params.accessKey,
-        p_isActive: true
+        p_isActive: params.isActive
     };
 
     return command.execute('user_register', spParams);
