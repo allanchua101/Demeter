@@ -15,7 +15,7 @@ Demeter is an online shopping application that sells extremely rare items (Diffe
 
 ### Bounded Contexts
 
-- Authentication - The context responsible for managing user records and login historizations.
+- [Authentication](authentication/README.md) - The context responsible for managing user records and login historizations.
 - Products - The context responsible for managing product information.
 - Catalog - The context responsible for managing product browsing activities. 
 - Cart - The context responsible for managing items that an end-user intends to buy.
@@ -23,7 +23,8 @@ Demeter is an online shopping application that sells extremely rare items (Diffe
 
 ### Tech Stack
 
-- Express (Backing APIs and Gateway Aggregation)
+- Vert.x (API Aggregation / Application Gateway)
+- Express (Backing APIs)
 - ASP.net Core (Backing API)
 - Spring MVC (Backing API)
 - Apollo / GraphQL 
