@@ -1,4 +1,4 @@
-const baseCommand = require('../../../utilities/data-stores/dbstore-command');
+const command = require('../../../utilities/data-stores/dbstore-command');
 
 /**
  * Method used for deactivating user records.
@@ -12,7 +12,7 @@ let execute = function(params) {
         p_userId: params.userId
     };
 
-    return baseQuery.execute('user_deactivate', spParams);
+    return command.execute('user_deactivate', spParams);
 }
 
 module.exports = {

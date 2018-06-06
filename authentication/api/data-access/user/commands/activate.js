@@ -1,4 +1,4 @@
-const baseCommand = require('../../../utilities/data-stores/dbstore-command');
+const command = require('../../../utilities/data-stores/dbstore-command');
 
 /**
  * Method used for activating user records.
@@ -12,7 +12,7 @@ let execute = function(params) {
         p_userId: params.userId
     };
 
-    return baseQuery.execute('user_activate', spParams);
+    return command.execute('user_activate', spParams);
 }
 
 module.exports = {

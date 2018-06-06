@@ -1,4 +1,4 @@
-const baseQuery = require('../../../utilities/data-stores/dbstore-query');
+const query = require('../../../utilities/data-stores/dbstore-query');
 
 /**
  * Method used for validating user credentials.
@@ -16,7 +16,7 @@ let execute = function(params) {
         p_accessKey: params.accessKey
     };
     
-    return baseQuery.getSingle('user_validateCredentials', spParams);
+    return query.getSingle('user_validateCredentials', spParams);
 }
 
 module.exports = {

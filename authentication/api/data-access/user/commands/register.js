@@ -1,4 +1,4 @@
-const baseCommand = require('../../../utilities/data-stores/dbstore-command');
+const command = require('../../../utilities/data-stores/dbstore-command');
 
 /**
  * Method used for registering users.
@@ -22,7 +22,7 @@ let execute = function(params) {
         p_isActive: true
     };
 
-    return baseQuery.execute('user_register', spParams);
+    return command.execute('user_register', spParams);
 }
 
 module.exports = {
