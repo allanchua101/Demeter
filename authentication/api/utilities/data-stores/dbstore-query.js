@@ -12,7 +12,7 @@ const dbstoreBase = require('./dbstore-base');
  *                                        needs to be performed on the query result.
  * @param {Function} [params.onError] - The callback that would be invoked if any process needs to be 
  *                                      performed on the response data.
- * @return {object} - The requested object.
+ * @returns {object} - The requested object.
  */
 let getSingle = (params) => dbstoreBase.executeQuery(dbstore.func, params);
 
@@ -27,7 +27,7 @@ let getSingle = (params) => dbstoreBase.executeQuery(dbstore.func, params);
  *                                        needs to be performed on the query result.
  * @param {Function} [params.onError] - The callback that would be invoked if any process needs to be 
  *                                      performed on the response data.
- * @return {object} - The requested set of data.
+ * @returns {object[]} - The requested set of data.
  */
 let getList = (params) => dbstoreBase.executeQuery(dbstore.func, params);
 
