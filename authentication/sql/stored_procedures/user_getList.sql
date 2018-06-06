@@ -4,7 +4,6 @@ RETURNS TABLE (
     firstName character varying(64),
     lastName character varying(64),
     email character varying(128),
-    accessKey character varying(1024),
     isActive bit
 ) AS $$
 	BEGIN
@@ -13,7 +12,6 @@ RETURNS TABLE (
 				,u."firstName"
 				,u."lastName"
 				,u."email"
-				,u."accessKey"
 				,u."isActive"
 	FROM public.users AS u;
    	END
