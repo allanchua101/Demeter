@@ -21,7 +21,7 @@ let execute = function(params) {
         lastName: input.lastName,
         email: input.email,
         accessKey: passwordHasher.execute(input.accessKey, PASSWORD_SALT),
-        p_isActive: true
+        isActive: true
     };
 
     return registerCommand.execute(commandParams);
