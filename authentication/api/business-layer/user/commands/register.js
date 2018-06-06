@@ -17,10 +17,10 @@ let execute = function(params) {
     const input = params || {};
     const commandParams = {
         userId: guidFactory.execute(),
-        firstName: params.firstName,
-        lastName: params.lastName,
-        email: params.email,
-        accessKey: passwordHasher.execute(params.accessKey, PASSWORD_SALT),
+        firstName: input.firstName,
+        lastName: input.lastName,
+        email: input.email,
+        accessKey: passwordHasher.execute(input.accessKey, PASSWORD_SALT),
         p_isActive: true
     };
 
