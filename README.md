@@ -23,12 +23,13 @@ Demeter is an online shopping application that sells extremely rare items (Diffe
 
 ### Tech Stack
 
-- Vert.x (API Aggregation / Application Gateway)
-- Express (Backing APIs)
-- ASP.net Core (Backing API)
-- Spring MVC (Backing API)
-- Apollo / GraphQL 
-- VueJS
-- PostgreSQL
-- SQL Server
-- Mongo DB
+- [Vert.x](https://vertx.io) (API Aggregation / Application Gateway)
+- [Express](https://expressjs.com) (Backing APIs)
+- [ASP.net Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.1) (Backing API)
+- [Spring MVC](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html) (Backing API)
+- [Fastify](https://www.fastify.io) (Backing API)
+- [Apollo / GraphQL](https://www.apollographql.com) 
+- [VueJS](https://vuejs.org)
+- [PostgreSQL](https://www.postgresql.org)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-2016)
+- [Mongo DB](https://www.mongodb.com)
